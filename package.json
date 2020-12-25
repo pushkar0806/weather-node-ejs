@@ -1,0 +1,27 @@
+{
+  "name": "weather-node",
+  "version": "1.0.0",
+  "description": "NodeJS weather forecast with EJS templating",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index.js",
+    "test": "mocha --timeout 4000"
+  },
+  "keywords": [
+    "nodeJS",
+    "expressJS",
+    "EJS",
+    "es6"
+  ],
+  "author": "Pushkar Abhishek",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "dotenv": "^8.2.0",
+    "ejs": "^3.1.5",
+    "express": "^4.17.1",
+    "node-fetch": "^2.6.1",
+    "supertest": "^6.0.1"
+  },
+  "devDependencies": {}
+}
