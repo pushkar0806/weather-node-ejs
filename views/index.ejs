@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <title>Weather App Predictor</title>
+</head>
+<body class="container-sm p-5 bg-dark text-white" style="background-image: url(/icons/2RNb.gif);text-align: center;">
+    <div class="weather-head">
+        <h1 style="font-size: xxx-large;">Current Weather Predictor</h1>
+        <p style="color: darkorange;">View the current weather of your city !!</p>
+    </div>
+    <form class="form-group" action="/" method="POST">
+        <input type="text" name="city" class="form-control" ng-class="{'no-border': toggle}" placeholder="Search your City">
+    </form>
+    <div class="result">
+        <% if(temp !== null) { %>
+            <h1 class="temp"><%= temp %> °C</h1>      
+        <% } %>
+        <div class="icon-des">
+            <% if(icon !== null) { %>
+                <img class="icon" src="http://openweathermap.org/img/w/<%= icon %>.png" alt="" style="height:100px;width:100px;">       
+            <% } %>
+            <% if(desc !== null) { %>
+                <h5 style="color: teal">Its seems <%= desc %> out there !</h5> 
+            <% } %>
+        </div>
+        <% if(city !== null) { %>
+            <h3 class="city"><%= city %></h3> 
+        <% } %>
+    </div>
+</body>
+</html>
+
